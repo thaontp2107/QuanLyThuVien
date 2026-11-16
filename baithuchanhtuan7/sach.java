@@ -3,13 +3,11 @@ import java.util.ArrayList;
 
 public class sach {
     
-    public String maSach;
-    public String tieuDe;
-    public String tacGia;
-    public int nxb;
-    public int soLg;
-
-    
+    private String maSach;
+    private String tieuDe;
+    private String tacGia;
+    private int nxb;
+    private int soLg;
 
     public sach(){ }
 
@@ -17,9 +15,61 @@ public class sach {
         this.maSach = maSach;
         this.tieuDe = tieuDe;
         this.tacGia =tacGia;
-        this.nxb = nxb;
-        this.soLg= soLg;
+        setNXB(nxb);
+        setSoLuong(soLg);
     }
+
+    public String getMaSach(){
+        return maSach;
+    }
+
+    public void setMaSach(String maSach){
+        this.maSach = maSach;
+    }
+
+    public String getTieuDeSach(){
+        return tieuDe;
+    }
+
+    public void setTieuDeSach(String tieuDe){
+        this.tieuDe = tieuDe;
+    }
+
+    public String getTacGia(){
+        return tacGia;
+    }
+
+    public void setTacGia(String tacGia){
+        this.tacGia = tacGia;
+    }
+
+    public int getNXB(){
+        return nxb;
+    }
+
+    public void setNXB(int nxb){
+        
+        int namhientai = java.time.Year.now().getValue();
+        if (nxb > 0 && nxb <= namhientai){
+            this.nxb = nxb;
+        } else{
+            System.out.println("Năm xuất bản không hợp lệ");
+        }   
+    }
+
+    public int getSoLuong(){
+        return soLg;
+    }
+
+    public void setSoLuong(int soLg){
+        if (soLg >= 0){
+            this.soLg = soLg;
+        } else {
+            System.out.println("so luong am");
+        }
+        
+    }
+
 
     public void inSach (){
         System.out.println("ma sach: "+ maSach);
