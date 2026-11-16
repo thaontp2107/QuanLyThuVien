@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class baitapthuchanhtuan5 {
+public class baithuchanhftuan5 {
 
     static Scanner sc = new Scanner(System.in);
     static ArrayList<String> danhSachSach = new ArrayList<>();
@@ -301,11 +301,11 @@ public class baitapthuchanhtuan5 {
                     break;
 
                 case 8:
-                    System.out.println("Da thoat chuong trinh!");
+                    System.out.println("Da thoat chuong trinh");
                     break;
 
                 default:
-                    System.out.println("Lua chon khong hop le!");
+                    System.out.println("Lua chon khong hop le");
             }
 
         } while (chon != 8);
